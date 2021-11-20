@@ -1,4 +1,4 @@
-package com.bridgelabz.springbootdemo.topics;
+package com.bridgelabz.springbootdemo.model;
 
 //import javax.persistence.Entity;
 //import javax.persistence.Id;
