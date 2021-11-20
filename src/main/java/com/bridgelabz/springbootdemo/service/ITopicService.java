@@ -10,4 +10,10 @@ public interface ITopicService {
 
 	Topic getTopicById(String id);
 
+	void addTopic(Topic topic);
+
+	void updateTopic(Topic topic, String id);
+
+	void deleteTopicById(String id);
+
 }
