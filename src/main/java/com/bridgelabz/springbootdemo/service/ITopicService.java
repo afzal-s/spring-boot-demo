@@ -1,6 +1,7 @@
 package com.bridgelabz.springbootdemo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.bridgelabz.springbootdemo.model.Topic;
 
@@ -8,12 +9,12 @@ public interface ITopicService {
 
 	List<Topic> getAllTopics();
 
-	Topic getTopicById(String id);
+	Optional<Topic> getTopicById(int id);
 
 	void addTopic(Topic topic);
 
-	void updateTopic(Topic topic, String id);
+	void updateTopic(Topic topic, int id);
 
-	void deleteTopicById(String id);
+	void deleteTopicById(int id);
 
 }

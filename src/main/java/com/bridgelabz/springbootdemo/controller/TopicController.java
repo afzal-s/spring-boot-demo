@@ -1,6 +1,7 @@
 package com.bridgelabz.springbootdemo.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,7 +29,7 @@ public class TopicController {
 	}
 	
 	@GetMapping("/topics/{id}")
-	public Topic getTopicById(@PathVariable String id) {
+	public Optional<Topic> getTopicById(@PathVariable int id) {
 		return topicService.getTopicById(id);
 	}
 	
@@ -38,12 +39,12 @@ public class TopicController {
 	}
 	
 	@PutMapping("/topics/{id}")
-	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
+	public void updateTopic(@RequestBody Topic topic, @PathVariable int id) {
 		topicService.updateTopic(topic, id);
 	}
 	
 	@DeleteMapping("/topics/{id}")
-	public void deleteTopicById(@PathVariable String id) {
+	public void deleteTopicById(@PathVariable int id) {
 		topicService.deleteTopicById(id);
 	}
 }
