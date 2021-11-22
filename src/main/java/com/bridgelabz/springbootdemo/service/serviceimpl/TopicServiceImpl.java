@@ -42,6 +42,7 @@ public class TopicServiceImpl implements ITopicService {
 			topicId.get().setId(topic.getId());
 			topicId.get().setName(topic.getName());
 			topicId.get().setDescription(topic.getDescription());
+			topicRepository.save(topicId.get());
 		}
 	}
 
